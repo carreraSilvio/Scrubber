@@ -1,5 +1,4 @@
-﻿using BrightLib.BrightEditing;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace BrightLib.Scrubbing.Editor

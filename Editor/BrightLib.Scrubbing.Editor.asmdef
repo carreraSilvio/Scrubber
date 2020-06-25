@@ -1,0 +1,17 @@
+{
+    "name": "BrightLib.Scrubbing.Editor",
+    "references": [
+        "GUID:fce180ce479dab64790424977ba7ca52"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
