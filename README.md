@@ -19,8 +19,7 @@ Unity 2018.3 and up
 
 #### Option B
 1. Clone or download the project zip
-2. Inside your project Assets folder create a folder called RPGDatabase
-3. Copy the repo there
+2. Copy the repo there inside your project's Assets folder
 
 ## Usage
 1. Make a script that inherits from Scriptable Object
