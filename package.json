@@ -1,5 +1,5 @@
 {
-  "name": "com.brightlib.Scrubbing",
+  "name": "com.brightlib.scrubbing",
   "version": "1.0.0",
   "displayName": "Scrubber",
   "description": "Edit your scriptable objects inside an editor window",
