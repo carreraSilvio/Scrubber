@@ -1,0 +1,15 @@
+{
+    "name": "BrightLib.Scrubbing.Samples",
+    "references": [
+        "GUID:fce180ce479dab64790424977ba7ca52"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
