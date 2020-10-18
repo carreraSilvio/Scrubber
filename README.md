@@ -22,7 +22,14 @@ Unity 2018.3 and up
 2. Copy the repo there inside your project's Assets folder
 
 ## Usage
+
+#### Option A
 1. Make a script that inherits from Scriptable Object
-2. Implement either IScrubData or IFancyScrubData
+2. Add either ScrubData or FancyScrubData attribute on top
 3. Double-click the ScriptableObject file in the project view
 4. A window will open with your scriptable object data
+
+#### Option B
+1. Right click a scriptable object asset in the project view
+2. Select "Scrubber/Open with Fancy Scrubber Window"
+3. A window will open with your scriptable object data
