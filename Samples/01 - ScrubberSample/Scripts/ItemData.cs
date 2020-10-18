@@ -10,6 +10,6 @@ namespace BrightLib.Scrubbing.Samples
         public string displayName = "Awesome item";
         public string description = "Please buy me";
         public int cost;
-        public bool canBeSold = true;
+        public bool unique;
     }
 }
