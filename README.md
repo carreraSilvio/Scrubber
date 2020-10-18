@@ -1,5 +1,7 @@
 # Scrubber
 Allows you to open any scriptable object in an editor window 
+![Imgur]https://i.imgur.com/IZ49lA8.png
+![Imgur]https://i.imgur.com/9ItVxkB.png
 
 ## Prerequisites
 Unity 2018.3 and up
@@ -10,6 +12,8 @@ Unity 2018.3 and up
 1. Open the package manager and point to the repo URL
 
 ![Imgur](https://i.imgur.com/iYGgINz.png)
+
+
 
 ### Before Unity 2019.3
 
