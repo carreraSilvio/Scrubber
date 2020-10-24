@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8720ecb7590e87b43ba586e5c2cdac98, type: 3}
-  m_Name: BronzeSword
+  m_Name: BlueKey
   m_EditorClassIdentifier: 
-  displayName: Bronze Sword
-  description: Please buy me
-  cost: 30
-  canBeSold: 1
+  displayName: Blue Key
+  description: Open blue chests
+  cost: 0
+  unique: 1
