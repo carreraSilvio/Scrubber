@@ -9,5 +9,18 @@
   {
     "name": "Silvio Carréra",
     "url": "https://github.com/carreraSilvio/Scrubber"
-  }
+  },
+   "samples": 
+  [
+    {
+        "displayName": "01 - ScrubberSample",
+        "description": "Sample with items for and RPG.",
+        "path": "Samples~/01 - ScrubberSample"
+    },
+    {
+        "displayName": "02 - FancyScrubberSample",
+        "description": "Sample with spells for an RPG.",
+        "path": "Samples~/02 - FancyScrubberSample"
+    }
+  ]
 }
