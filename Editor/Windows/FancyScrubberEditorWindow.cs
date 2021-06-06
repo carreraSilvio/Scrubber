@@ -60,11 +60,7 @@ namespace BrightLib.Scrubbing.Editor
             {
                 do
                 {
-                    if (string.Equals(prop.name, "m_Script"))
-                    {
-                        continue;
-                    }
-                    else
+                    if (!string.Equals(prop.name, "m_Script"))
                     {
                         if (GUILayout.Button(prop.displayName))
                         {
