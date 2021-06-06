@@ -11,5 +11,12 @@ namespace BrightLib.Scrubbing.Samples
         public string description = "Please buy me";
         public int cost;
         public bool unique;
+        public int attack;
+        public int defense;
+        public int magicAttack;
+        public int magicDefense;
+        public int agility;
+        public int luck;
+
     }
 }
