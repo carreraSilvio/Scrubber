@@ -27,7 +27,10 @@ namespace BrightLib.Scrubbing.Editor
         /// </summary>
         protected void DrawAllVisibleProperties()
         {
-            if (_serializedObject == null) return;
+            if (_serializedObject == null)
+            {
+                return;
+            }
 
             SerializedProperty prop = _serializedObject.GetIterator();
             if (prop.NextVisible(true))
@@ -50,19 +53,6 @@ namespace BrightLib.Scrubbing.Editor
                     while (prop.NextVisible(false));
                 }
                 EditorGUILayout.EndScrollView();
-            }
-        }
-
-        protected void DrawAllVisibleProperties(SerializedObject serializedObject, bool includeChildren = true)
-        {
-            SerializedProperty prop = serializedObject.GetIterator();
-            if (prop.NextVisible(true))
-            {
-                do
-                {
-                    EditorGUILayout.PropertyField(prop, includeChildren: includeChildren);
-                }
-                while (prop.NextVisible(false));
             }
         }
 
