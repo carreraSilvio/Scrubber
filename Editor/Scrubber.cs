@@ -52,7 +52,7 @@ namespace BrightLib.Scrubbing.Editor
             wnd.SerializedObject = new SerializedObject(scrubData);
         }
 
-        [OnOpenAsset()]
+        [OnOpenAsset]
         public static bool HandleClickScrubData(int instanceId, int line)
         {
             Object obj = EditorUtility.InstanceIDToObject(instanceId) as Object;
