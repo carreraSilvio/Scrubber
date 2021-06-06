@@ -13,8 +13,6 @@ Unity 2018.3 and up
 
 ![Imgur](https://i.imgur.com/iYGgINz.png)
 
-
-
 ### Before Unity 2019.3
 
 #### Option A
@@ -27,14 +25,14 @@ Unity 2018.3 and up
 
 ## Usage
 
-#### Option A
+### Option A
 ![Imgur](https://i.imgur.com/2gcNS3G.png)
 1. Make a script that inherits from Scriptable Object
 2. Add either ScrubData or FancyScrubData attribute on top
 3. Double-click the ScriptableObject file in the project view
 4. A window will open with your scriptable object data
 
-#### Option B
+### Option B
 ![Imgur](https://i.imgur.com/uKSn3E5.png)
 1. Right click a scriptable object asset in the project view
 2. Select "Scrubber/Open with Fancy Scrubber Window"

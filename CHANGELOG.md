@@ -1,3 +1,8 @@
+## [1.2.0] - 2021-06-06
+
+### New
+* Added ScrollView to regular and fancy editor windows
+
 ## [1.1.0] - 2020-10-18
 
 ### New
