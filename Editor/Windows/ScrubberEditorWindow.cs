@@ -10,6 +10,7 @@ namespace BrightLib.Scrubbing.Editor
     {
         private SerializedObject _serializedObject;
         private SerializedProperty _currentProperty;
+        private Vector2 _scrollPosition;
 
         internal SerializedObject SerializedObject { get => _serializedObject; set => _serializedObject = value; }
         internal SerializedProperty CurrentProperty { get => _currentProperty; set => _currentProperty = value; }
@@ -31,20 +32,24 @@ namespace BrightLib.Scrubbing.Editor
             SerializedProperty prop = _serializedObject.GetIterator();
             if (prop.NextVisible(true))
             {
-                do
+                _scrollPosition = EditorGUILayout.BeginScrollView(_scrollPosition);
                 {
-                    if (string.Equals(prop.name, "m_Script"))
+                    do
                     {
-                        GUI.enabled = false;
-                        EditorGUILayout.PropertyField(prop, includeChildren: true);
-                        GUI.enabled = true;
+                        if (string.Equals(prop.name, "m_Script"))
+                        {
+                            GUI.enabled = false;
+                            EditorGUILayout.PropertyField(prop, includeChildren: true);
+                            GUI.enabled = true;
+                        }
+                        else
+                        {
+                            EditorGUILayout.PropertyField(prop, includeChildren: true);
+                        }
                     }
-                    else
-                    {
-                        EditorGUILayout.PropertyField(prop, includeChildren: true);
-                    }
+                    while (prop.NextVisible(false));
                 }
-                while (prop.NextVisible(false));
+                EditorGUILayout.EndScrollView();
             }
         }
 
@@ -55,7 +60,7 @@ namespace BrightLib.Scrubbing.Editor
             {
                 do
                 {
-                    EditorGUILayout.PropertyField(prop, includeChildren: true);
+                    EditorGUILayout.PropertyField(prop, includeChildren: includeChildren);
                 }
                 while (prop.NextVisible(false));
             }

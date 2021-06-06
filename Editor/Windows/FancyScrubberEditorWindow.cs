@@ -10,33 +10,43 @@ namespace BrightLib.Scrubbing.Editor
     {
         private SerializedProperty _selectedProperty;
         private string _selectedPropertyPath;
+        private Vector2 _leftContentScrollPosition;
+        private Vector2 _rightContentScrollPosition;
 
         public override void OnGUI()
         {
             EditorGUILayout.BeginHorizontal();
             {
-                EditorGUILayout.BeginVertical("box", GUILayout.MaxWidth(150), GUILayout.ExpandHeight(true));
+                _leftContentScrollPosition = EditorGUILayout.BeginScrollView(_leftContentScrollPosition);
                 {
-                    DrawSidebar();
+                    EditorGUILayout.BeginVertical("box", GUILayout.MaxWidth(150), GUILayout.ExpandHeight(true));
+                    {
+                        DrawSidebar();
+                    }
+                    EditorGUILayout.EndVertical();
                 }
-                EditorGUILayout.EndVertical();
+                EditorGUILayout.EndScrollView();
 
-                EditorGUILayout.BeginVertical("box", GUILayout.ExpandHeight(true));
+                _rightContentScrollPosition = EditorGUILayout.BeginScrollView(_rightContentScrollPosition);
                 {
-                    if (_selectedProperty != null)
+                    EditorGUILayout.BeginVertical("box", GUILayout.ExpandHeight(true));
                     {
-                        EditorGUILayout.BeginHorizontal("box");
+                        if (_selectedProperty != null)
                         {
-                            EditorGUILayout.PropertyField(_selectedProperty, includeChildren: true);
+                            EditorGUILayout.BeginHorizontal("box");
+                            {
+                                EditorGUILayout.PropertyField(_selectedProperty, includeChildren: true);
+                            }
+                            EditorGUILayout.EndHorizontal();
                         }
-                        EditorGUILayout.EndHorizontal();
+                        else
+                        {
+                            EditorGUILayout.LabelField("Select an item from the list");
+                        }
                     }
-                    else
-                    {
-                        EditorGUILayout.LabelField("Select an item from the list");
-                    }
+                    EditorGUILayout.EndVertical();
                 }
-                EditorGUILayout.EndVertical();
+                EditorGUILayout.EndScrollView();
             }
             EditorGUILayout.EndHorizontal();
 
