@@ -15,6 +15,11 @@ namespace BrightLib.Scrubbing.Editor
 
         public override void OnGUI()
         {
+            if (SerializedObject == null)
+            {
+                return;
+            }
+            
             EditorGUILayout.BeginHorizontal();
             {
                 _leftContentScrollPosition = EditorGUILayout.BeginScrollView(_leftContentScrollPosition);
