@@ -17,6 +17,10 @@ namespace BrightLib.Scrubbing.Editor
 
         public virtual void OnGUI()
         {
+            if (_serializedObject == null)
+            {
+                return;
+            }
             DrawAllVisibleProperties();
 
             SerializedObject.ApplyModifiedProperties();
@@ -27,10 +31,6 @@ namespace BrightLib.Scrubbing.Editor
         /// </summary>
         protected void DrawAllVisibleProperties()
         {
-            if (_serializedObject == null)
-            {
-                return;
-            }
 
             SerializedProperty prop = _serializedObject.GetIterator();
             if (prop.NextVisible(true))
