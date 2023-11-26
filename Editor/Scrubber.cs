@@ -23,7 +23,7 @@ namespace BrightLib.Scrubbing.Editor
 		/// Open ScriptableObject with ScrubberWindow
 		/// </summary>
 		[MenuItem(MENU_ITEM_PATH + "Open with Scrubber Window", false, MENU_ITEM_PRIORITY)]
-        private static void OpenWithScrubber()
+        private static void OpenWithScrubberWindow()
         {
             var selectedObject = Selection.activeObject;
             if (selectedObject is ScriptableObject)
@@ -36,7 +36,7 @@ namespace BrightLib.Scrubbing.Editor
 		/// Open ScriptableObject with FancyScrubberWindow
 		/// </summary>
 		[MenuItem(MENU_ITEM_PATH + "Open with Fancy Scrubber Window", false, MENU_ITEM_PRIORITY)]
-        private static void OpenWithFancyScrubber()
+        private static void OpenWithFancyScrubberWindow()
         {
             var selectedObject = Selection.activeObject;
             if (selectedObject is ScriptableObject)
@@ -45,11 +45,21 @@ namespace BrightLib.Scrubbing.Editor
             }
         }
 
+        public static void OpenScrubberEditorWindow(Object scrubData)
+        {
+            OpenScrubberEditorWindow<ScrubberEditorWindow>(scrubData);
+        }
+
+        public static void OpenFancyScrubberEditorWindow(Object scrubData) 
+        {
+            OpenScrubberEditorWindow<FancyScrubberEditorWindow>(scrubData);
+        }
+
         private static void OpenScrubberEditorWindow<T>(Object scrubData) where T : ScrubberEditorWindow
         {
-            T wnd = EditorWindow.CreateWindow<T>(new Type[] { typeof(T) });
-            wnd.titleContent = new UnityEngine.GUIContent(scrubData.name);
-            wnd.SerializedObject = new SerializedObject(scrubData);
+            T window = EditorWindow.CreateWindow<T>(new Type[] { typeof(T) });
+            window.titleContent = new UnityEngine.GUIContent(scrubData.name);
+            window.SerializedObject = new SerializedObject(scrubData);
         }
 
         [OnOpenAsset]
